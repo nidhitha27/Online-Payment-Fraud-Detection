@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payments Fraud Detection</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Payments Fraud Detection</h1>
+        <form method="post" action="/predict" class="form" id="fraudForm">
+            <label>Select Type:</label>
+            <select name="type" id="type" required>
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option value="CASH_OUT">CASH_OUT</option>
+                <option value="PAYMENT">PAYMENT</option>
+                <option value="CASH_IN">CASH_IN</option>
+                <option value="TRANSFER">TRANSFER</option>
+                <option value="DEBIT">DEBIT</option>
+            </select>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter Amount" required>
+
+            <label for="oldbalanceOrg">Old Balance:</label>
+            <input type="number" id="oldbalanceOrg" name="oldbalanceOrg" placeholder="Old Balance" required>
+
+            <label for="newbalanceOrig">New Balance:</label>
+            <input type="number" id="newbalanceOrig" name="newbalanceOrig" placeholder="New Balance" required>
+
+            <input type="submit" value="Submit" id="submitButton">
+        </form>
+
+        <div class="prediction-result" id="predictionResult">
+            <p>Fraud Detection Result: <strong id="resultText"></strong></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

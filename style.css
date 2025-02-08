@@ -1,0 +1,83 @@
+/* style.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef2f3; /* Light grayish blue */
+    color: #2c3e50; /* Dark slate gray */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background-color: #ffffff; /* White */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    padding: 25px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 26px;
+    color: #34495e; /* Deep gray */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 15px;
+    color: #34495e;
+    text-align: left;
+    font-weight: bold;
+}
+
+select, input[type="number"], input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7; /* Light gray border */
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ecf0f1; /* Light gray background */
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #3498db; /* Bright blue */
+    background-color: #ffffff; /* White */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #3498db; /* Bright blue */
+    color: #ffffff; /* White */
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9; /* Darker blue */
+    box-shadow: 0 4px 10px rgba(41, 128, 185, 0.4); /* Subtle hover shadow */
+}
+
+.prediction-result {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #2c3e50; /* Dark slate gray */
+}
+
+#resultText {
+    color: #e74c3c; /* Vivid red for attention */
+    font-weight: bold;
+}
